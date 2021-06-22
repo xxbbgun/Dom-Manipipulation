@@ -53,12 +53,13 @@
       </div>
     </div>
   </div>
-<div id="addUserDetail">
+  
+  <div id="addUserDetail">
   <div class="d-flex justify-content-center my-3" >
     <form class="row gy-2 gx-3 align-items-center">
       <div class="form-floating">
         <input type="text" class="form-control" id="nameInput" placeholder="ชื่อ">
-        <label for="nameInput">Name</label>
+        <label for="nameInput" id="labelName">Name</label>
       </div>
       <div class="form-floating">
         <input type="text" class="form-control" id="surnameInput" placeholder="นามสกุล">
@@ -76,14 +77,11 @@
         <input type="text" class="form-control" id="imageLinkInput" placeholder="image Link">
         <label for="imageLinkInput">Link รูป</label>
       </div>
-      <div class="col-auto">
+      <div class="col-auto" id="addBtn">
         <button type="button" class="btn btn-primary" id="addButton">Submit</button>
       </div>
     </form>
   </div>
-</div>
-
-  <div class="d-flex flex-row justify-content-center" >
   </div>
 
   <div id="output" class="px-5">
@@ -94,6 +92,7 @@
           <th scope="col">ชื่อ</th>
           <th scope="col">รหัส</th>
           <th scope="col">เกรด</th>
+          <th scope="col">แก้ไข</th>
           <th scope="col">ลบ</th>
         </tr>
       </thead>
@@ -102,7 +101,62 @@
     </table>
   </div>
 
-  <div id="sinigle_student_result" class="px-3 m-5">
+  <div id="edit_student_result">
+    <div class="px-3 m-5">
+        <div class="row">
+            <div class="col-3"><b>Id:</b></div>
+            <div class="col-3" id="editid"></div>
+        </div>
+        <div class="row">
+            <div class="col-3"><b>Student Id:</b></div>
+            <div class="col-3" id="editstudentId"></div>
+        </div>
+        <div class="row">
+            <div class="col-3"><b>Name:</b></div>
+            <div class="col-3" id="editname"></div>
+        </div>
+        <div class="row">
+            <div class="col-3"><b>GPA:</b></div>
+            <div class="col-3" id="editgpa"></div>
+        </div>
+        <div class="row">
+            <div class="col-3"><b>Image:</b></div>
+            <div class="col-3" id="editid">
+                <img src="/" alt="default image" id="editimage" />
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center my-3">
+        <form class="row gy-2 gx-3 align-items-center">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="editnameInput" placeholder="Name">
+                <label for="editnameInput">Name</label>
+            </div>
+            <div class="form-floating">
+                <input type="text" class="form-control" id="editsurnameInput" placeholder="Name">
+                <label for="editsurnameInput">Surname</label>
+            </div>
+            <div class="form-floating">
+                <input type="text" class="form-control" id="editstudentIdInput" placeholder="Name">
+                <label for="editstudentIdInput">Student ID</label>
+            </div>
+            <div class="form-floating">
+                <input type="text" class="form-control" id="editgpaInput" placeholder="Name">
+                <label for="editgpaInput">GPA</label>
+            </div>
+            <div class="form-floating">
+                <input type="text" class="form-control" id="editimageLinkInput" placeholder="Name">
+                <label for="editimageLinkInput">Image Link</label>
+            </div>
+            <div class="col-auto">
+                <button type="button" class="btn btn-primary" id="editButton">Edit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+  <div id="single_student_result" class="px-3 m-5">
     <div class="row">
       <div class="col-3"><b>Id:</b></div>
       <div class="col-3" id="id">id</div>
@@ -120,38 +174,14 @@
       <div class="col-3" id="gpa">gpa</div>
     </div>
     <div class="row">
-      <div class="col-3"><b>Id:</b></div>
-      <div class="col-3">
-        <img src="asset/images/default.jpg" alt="default image" id="image">
+      <div class="col-3"><b>Image:</b></div>
+      <div class="col">
+        <img src="asset/images/default.jpg" alt="default image" id="image" />
       </div>
     </div>
-
-    <div id="edit_student_result">
-      <div class="px-3 m-5">
-          <div class="row">
-              <div class="col-3"><b>Id:</b></div>
-              <div class="col-3" id="editid"></div>
-          </div>
-          <div class="row">
-              <div class="col-3"><b>Student Id:</b></div>
-              <div class="col-3" id="editstudentId"></div>
-          </div>
-          <div class="row">
-              <div class="col-3"><b>Name:</b></div>
-              <div class="col-3" id="editname"></div>
-          </div>
-          <div class="row">
-              <div class="col-3"><b>GPA:</b></div>
-              <div class="col-3" id="editgpa"></div>
-          </div>
-          <div class="row">
-              <div class="col-3"><b>Image:</b></div>
-              <div class="col-3" id="editid">
-                  <img src="/" alt="default image" id="editimage" />
-              </div>
-          </div>
-      </div>
   </div>
+
+
   <!-- Optional JavaScript; choose one of the two! -->
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
